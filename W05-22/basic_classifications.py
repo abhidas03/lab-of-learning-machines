@@ -36,8 +36,11 @@ test_images = test_images / 255.0
 # plt.show()
 
 model = tf.keras.Sequential([
+    #Input layer - converts 28x28 pixel data into one 728 column for input layer
     tf.keras.layers.Flatten(input_shape=(28, 28)),
+    #Fully connected neural layer
     tf.keras.layers.Dense(128, activation='relu'),
+    #Output layer
     tf.keras.layers.Dense(10)
 ])
 
